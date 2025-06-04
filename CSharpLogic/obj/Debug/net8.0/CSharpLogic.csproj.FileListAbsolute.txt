@@ -12,3 +12,4 @@ C:\Users\richa\OneDrive - University of Wolverhampton\Documents\University\Summe
 C:\Users\richa\OneDrive - University of Wolverhampton\Documents\University\Summer Learning\CSharpLogic\CSharpLogic\obj\Debug\net8.0\CSharpLogic.pdb
 C:\Users\richa\OneDrive - University of Wolverhampton\Documents\University\Summer Learning\CSharpLogic\CSharpLogic\obj\Debug\net8.0\CSharpLogic.genruntimeconfig.cache
 C:\Users\richa\OneDrive - University of Wolverhampton\Documents\University\Summer Learning\CSharpLogic\CSharpLogic\obj\Debug\net8.0\ref\CSharpLogic.dll
+C:\Users\richa\OneDrive - University of Wolverhampton\Documents\University\Summer Learning\CSharpLogic\CSharpLogic\obj\Debug\net8.0\CSharpLogic.sourcelink.json
