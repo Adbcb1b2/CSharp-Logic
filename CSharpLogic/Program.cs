@@ -32,6 +32,7 @@ namespace CSharpLogic
             //Authorisation.AuthoriseLoginCredentials();
 
             Authorisation.AuthoriseLoginCredentials2();
+            PermissionLevel.PermissionLevelCheck();
         }
     }
 
@@ -88,7 +89,30 @@ namespace CSharpLogic
             Console.WriteLine(result);
         }
     }
-    
+
+    class PermissionLevel
+    {
+        public static void PermissionLevelCheck()
+        {
+            string permission = "Admin|Manager";
+            int level = 56;
+
+            if (permission.Contains("Admin"))
+            {
+                Console.Write((level > 55) ? "Welcome, Super Admin." : "Welcome Admin.");
+            }
+            else if (permission.Contains("Manager"))
+            {
+                Console.WriteLine((level >= 20) ? "Contact Admin for Access" : "You don't have sufficient privilidges.");
+            }
+            else
+            {
+                Console.WriteLine("You don't have sufficient privilidges");
+            }
+
+
+        }
+    }
 
 
 
