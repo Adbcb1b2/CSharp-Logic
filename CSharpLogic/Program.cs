@@ -31,8 +31,10 @@ namespace CSharpLogic
             // Stateless method call
             //Authorisation.AuthoriseLoginCredentials();
 
-            Authorisation.AuthoriseLoginCredentials2();
-            PermissionLevel.PermissionLevelCheck();
+            //Authorisation.AuthoriseLoginCredentials2();
+            //PermissionLevel.PermissionLevelCheck();
+            VariableScopeExample.VariableScopeCheck();
+            VariableScopeExample2.VariableScopeCheck2();
         }
     }
 
@@ -111,6 +113,50 @@ namespace CSharpLogic
             }
 
 
+        }
+    }
+
+    class VariableScopeExample
+    {
+
+        public static void VariableScopeCheck()
+        {
+            bool flag = true;
+            if (flag)
+            {
+                int value = 10;
+                Console.WriteLine($"Inside the code block: {value}"); // Variable will only be accessible within the code block
+            }
+            // Wouldn't be able to do this as it is outside the codeblock: Console.WriteLine($"Outside the code block: {value}");
+
+        }
+    }
+
+    class VariableScopeExample2
+    {
+        public static void VariableScopeCheck2()
+        {
+            bool flag = true;
+            int value = 0;
+
+            if (flag)
+            {
+                value = 10;
+                Console.WriteLine($"Inside the codeblock value: {value}");
+            }
+
+            // This should print outside the code block, with the value it was assigned inside the code block
+            Console.WriteLine($"Outside the codeblock: {value}");
+
+            // Did you know, you don't need curly braces if the block after a conditional statement is only 1 line long!
+            string name = "Kim";
+
+            if (name == "Steve")
+                Console.WriteLine("We found Steve!");
+            else if (name == "Kim")
+                Console.WriteLine("We found Kim"!);
+            else
+                Console.WriteLine("We found Bob");
         }
     }
 
