@@ -7,7 +7,7 @@ using System.Threading.Tasks.Dataflow;
 namespace CSharpLogic
 {
     class Program
-    {   
+    {
         /** This is the main class, the entry point to the program.
             This is where you can create instances of other classes, if they are public
             It attempts to retrieve the command line argument
@@ -28,9 +28,10 @@ namespace CSharpLogic
             }
 
 
-            // Create a new BooleanLogicExample object
-            Authorisation.AuthoriseLoginCredentials();
+            // Stateless method call
+            //Authorisation.AuthoriseLoginCredentials();
 
+            Authorisation.AuthoriseLoginCredentials2();
         }
     }
 
@@ -72,7 +73,23 @@ namespace CSharpLogic
             }
 
         }
+        public static void AuthoriseLoginCredentials2()
+        {
+            string firstPetName = "Henry";
+
+            Console.WriteLine("Please enter the name of your first pet:");
+
+            string? firstPetNameInput = Console.ReadLine();
+
+            string result = (firstPetNameInput == firstPetName)
+                ? "You have passed this step of the authorisation"
+                : "You have entered the incorrect first pet name";
+
+            Console.WriteLine(result);
+        }
     }
+    
+
 
 
     
