@@ -33,8 +33,10 @@ namespace CSharpLogic
 
             //Authorisation.AuthoriseLoginCredentials2();
             //PermissionLevel.PermissionLevelCheck();
-            VariableScopeExample.VariableScopeCheck();
-            VariableScopeExample2.VariableScopeCheck2();
+            //VariableScopeExample.VariableScopeCheck();
+            //VariableScopeExample2.VariableScopeCheck2();
+            SwitchCaseExample.SwitchCaseEmployeeLevelCheck();
+
         }
     }
 
@@ -160,7 +162,36 @@ namespace CSharpLogic
         }
     }
 
+    class SwitchCaseExample
+    {
+        public static void SwitchCaseEmployeeLevelCheck()
+        {
+            int employeeLevel = 200;
+            string title;
 
+            // Switch statement
+            switch (employeeLevel)
+            {
+                case 100:
+                case 200:
+                    title = "Senior Associate";
+                    break;
+                case 300:
+                    title = "Manager";
+                    break;
+                case 400:
+                    title = "Senior Manager";
+                    break;
+                case 500:
+                    title = "Associate";
+                    break;
+                default:
+                    title = "Associate";
+                    break;
+            }
 
-    
+            Console.WriteLine(title);
+        }        
+    }
+
 }
