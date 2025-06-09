@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CSharpLogic")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4f047a3ca8b0f45e7d627e71790b6eba5d4ea506")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76cce31526f7d7bda695fb3608c347b537fbc647")]
 [assembly: System.Reflection.AssemblyProductAttribute("CSharpLogic")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CSharpLogic")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

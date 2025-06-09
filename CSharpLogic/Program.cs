@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks.Dataflow;
 
@@ -35,7 +37,10 @@ namespace CSharpLogic
             //PermissionLevel.PermissionLevelCheck();
             //VariableScopeExample.VariableScopeCheck();
             //VariableScopeExample2.VariableScopeCheck2();
-            SwitchCaseExample.SwitchCaseEmployeeLevelCheck();
+            //SwitchCaseExample.SwitchCaseEmployeeLevelCheck();
+            WhileAndDoWhileExamples.Example1();
+            WhileAndDoWhileExamples.Example2();
+            WhileAndDoWhileExamples.Example3();
 
         }
     }
@@ -191,7 +196,58 @@ namespace CSharpLogic
             }
 
             Console.WriteLine(title);
-        }        
+        }
     }
+
+}
+
+class WhileAndDoWhileExamples
+{
+    public static void Example1()
+    {
+
+        // Generate a random object
+        Random random = new Random();
+
+        int randomNumber = 0;
+        // This is a do-while loop - guranteed to run at least once
+        do
+        {
+            // This block executes in a loop until the condition is met
+            randomNumber = random.Next(1, 11); // Generate a random number 1-10
+            Console.WriteLine("Current Number: " + randomNumber);
+        } while (randomNumber != 7);
+
+        Console.WriteLine("Number: " + randomNumber + " The loop is over"); // This wll only excute once the loop has exited, i.e the random number is 7
+    }
+
+    public static void Example2()
+    {
+        int number = 4;
+
+        // This is a while loop, not guranted to run 
+        while (number != 4)
+        {
+            Console.WriteLine("Your number doesn't equal 4!");
+        }
+
+        Console.WriteLine("Your number equals 4");
+    }
+
+    public static void Example3()
+    {
+        Random random = new Random();
+        int current = 1;
+
+        do
+        {
+            current = random.Next(1, 11);
+
+            if (current >= 8) continue;
+
+            Console.WriteLine(current); // This will only print when the number is less than 8 and not 7
+        } while (current != 7);
+    }
+
 
 }
